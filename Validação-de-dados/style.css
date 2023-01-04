@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.5s;
+}
+
+body{
+    background-image: linear-gradient(to right, #2f72e6, rgb(71, 71, 71));
+    height: 100vh;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(242, 242, 242);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.527);
+    border-radius: 10px;
+}
+
+.container h1{
+    color: #2f72e6;
+    text-shadow: 0px 2px 3px rgba(2, 2, 2, 0.301);
+}
+
+.inputUsuario{
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-bottom: 1.5px solid #2f72e6;
+    background: none;
+    outline: none;
+}
+
+#senhaInvalida{
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    padding-bottom: 15px;
+    color: red;
+    font-weight: bold;
+}
+
+#submit{
+
+    display: block;
+    margin: auto;
+    padding: 5px 20px;
+    cursor: pointer;
+    background-color: #2f72e6;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+
+}
