@@ -10,16 +10,21 @@
     
     <form action="main.php" method="POST">
 
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome"><br>
+        <input type="text" name="nome" placeholder="Insira seu nome">
 
-        <label for="idade">Idade:</label>
-        <input type="number" name="idade"><br>
+        <select name="escolaridade">
+            <option value="ens_fund">Ensino Fundamental</option>
+            <option value="ens_med">Ensino Médio</option>
+            <option value="ens_sup">Ensino Superior</option>
+        </select>
+
+        <input type="text" name="idade" placeholder="Sua idade">
 
         <input type="submit">
     </form>
 
     <?php
+
         include_once("pessoa.php");
 
         $nome = $_POST["nome"];
@@ -27,6 +32,7 @@
 
         $usuario = new Pessoa($nome,$idade);
         $usuario->socializar();
+        $usuario->getEscolaridade();
     ?>
 
 </body>

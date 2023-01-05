@@ -3,43 +3,68 @@
     class Pessoa{
 
         private string $nome;
-        private int $idade;
+        private string $idade;
 
         public function __construct($nome, $idade){
 
             $this->nome = $nome;
             $this->idade = $idade;
+
         }
 
         // Nome
         public function getNome(){
-            
-            return "Seu nome é: $this->nome <br>";
-        }
 
-        public function setNome(string $nome){
+            return $this->nome;  
 
-            $this->nome = $nome;
         }
 
         // Idade
         public function getIdade(){
 
-            return "Idade: $this->idade <br>";
-        }
+            return $this->idade;
 
-        public function setIdade(int $idade){
-
-            return "Sua nova idade é: $this->idade = $idade <br>";
         }
 
         public function socializar(){
-            echo "Seu nome é: $this->nome <br>";
-            echo "Idade: $this->idade <br>";
 
+            if(empty($this->nome)){
+                echo "<span style='color: red';>Nome inválido</span><br>";
+            }
+            else{
+                echo "Seu nome é: $this->nome <br>";
+            }
+
+            if(empty($this->idade) || ($this->idade < 0)){
+
+                echo "<span style='color: red';>Idade inválida</span><br>";
+
+            }
+            else{
+                echo "Idade: $this->idade <br>";
+            } 
         }
+
+
+        function getEscolaridade(){
+
+            $escolaridade = $_POST["escolaridade"];
+
+            switch($escolaridade){
+
+                case "ens_fund":
+                    echo "Você está no ensino fundamental";
+                    break;
+                
+                case "ens_med":
+                    echo "Você está no ensino médio";
+                    break;
+
+                case "ens_sup":
+                    echo "Você está no ensino superior";
+                    break;
+            }
+        }
+
     }
-
-
-
 ?>
