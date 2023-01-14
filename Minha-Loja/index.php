@@ -57,6 +57,7 @@
                         <td>".$row['first_name']."</td>
                         <td>".$row['last_name']."</td>
                         <td>".$row['email']."</td>
+                        <td>".$row['phone']."</td>
                         <td>".$row['address']."</td>
                         <td>
                             <a class='btn btn-primary btn-sm' href='update'>Update</a>
